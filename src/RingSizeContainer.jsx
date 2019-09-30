@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
+import {useMediaQuery} from "@material-ui/core";
 
 const styles={
     "dot": {
@@ -53,7 +54,7 @@ const styles={
     },
     collapsible: {
         backgroundColor: '#555658',
-        color: 'white',
+        color: 'black',
         cursor: 'pointer',
         padding: 18,
         width: '100%',
@@ -93,7 +94,7 @@ class RingSizeContainer extends React.Component {
             ringSizer:"none"
         };
         this.sizeTable = {
-            5: {circumference:"44.90",diameter:"14.30"}, //54.04px
+            5: {circumference:"44.90",diameter:"54.04"}, //54.04px
             6: {circumference:"45.90",diameter:"14.62"},
             7: {circumference:"47.10",diameter:"15.00"},
             8: {circumference:"48.10",diameter:"15.32"},
@@ -113,7 +114,7 @@ class RingSizeContainer extends React.Component {
             22: {circumference:"61.90",diameter:"19.71"},
             23: {circumference:"62.80",diameter:"20.00"},
             24: {circumference:"63.80",diameter:"20.32"},
-            25: {circumference:"64.70",diameter:"20.61"}, //77.89px
+            25: {circumference:"64.70",diameter:"77.89"}, //77.89px
         };
 
     }
@@ -143,8 +144,8 @@ class RingSizeContainer extends React.Component {
                     <div
                         className={classes.dot}
                         style={{
-                            width: `${sizeTable[currentStep].diameter}mm`,
-                            height: `${sizeTable[currentStep].diameter}mm`,
+                            width: `${sizeTable[currentStep].diameter}px`,
+                            height: `${sizeTable[currentStep].diameter}px`,
                             transition: "all 0.1s linear",
                         }} />
                 </div>
@@ -165,30 +166,3 @@ class RingSizeContainer extends React.Component {
 }
 
 export default withStyles(styles)(RingSizeContainer);
-
-
-//
-// <div className={classes.container}>
-//     <div
-//         className={classes.dot}
-//         style={{
-//             width: `${sizeTable[currentStep]}mm`,
-//             height: `${sizeTable[currentStep]}mm`,
-//             transition: "all 0.1s linear",
-//         }} />
-// </div>
-// <div className={classes.slidecontainer}>
-//     {/*<Slider*/}
-// {/*    defaultValue={this.state.currentStep}*/}
-// {/*    // getAriaValueText={valuetext}*/}
-// {/*    aria-labelledby="discrete-slider"*/}
-// {/*    valueLabelDisplay="auto"*/}
-// {/*    step={1}*/}
-// {/*    min={5}*/}
-// {/*    max={25}*/}
-// {/*    onChange={this.resize}*/}
-// {/*/>*/}
-//
-// {/*<input type="range" min="1" max="20" value="1" className={classes.slider} step="1" id="myRange"*/}
-// {/*       onInput={this.resize(value)}/>*/}
-// </div>
