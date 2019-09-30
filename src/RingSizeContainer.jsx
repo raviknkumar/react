@@ -94,27 +94,27 @@ class RingSizeContainer extends React.Component {
             ringSizer:"none"
         };
         this.sizeTable = {
-            5: {circumference:"44.90",diameter:"54.04"}, //54.04px
-            6: {circumference:"45.90",diameter:"14.62"},
-            7: {circumference:"47.10",diameter:"15.00"},
-            8: {circumference:"48.10",diameter:"15.32"},
-            9: {circumference:"49.00",diameter:"15.61"},
-            10: {circumference:"50.00",diameter:"15.92"},
-            11: {circumference:"50.90",diameter:"16.21"},
-            12: {circumference:"51.80",diameter:"16.50"},
-            13: {circumference:"52.80",diameter:"16.82"},
-            14: {circumference:"54.00",diameter:"17.20"},
-            15: {circumference:"55.00",diameter:"17.52"},
-            16: {circumference:"55.90",diameter:"17.80"},
-            17: {circumference:"56.90",diameter:"18.12"},
-            18: {circumference:"57.80",diameter:"18.41"},
-            19: {circumference:"59.10",diameter:"18.82"},
-            20: {circumference:"60.00",diameter:"19.11"},
-            21: {circumference:"60.90",diameter:"19.39"},
-            22: {circumference:"61.90",diameter:"19.71"},
-            23: {circumference:"62.80",diameter:"20.00"},
+            5: {circumference:"44.90",diameter:"1.04"}, //54.04px
+            6: {circumference:"45.90",diameter:"2.62"},
+            7: {circumference:"47.10",diameter:"3.00"},
+            8: {circumference:"48.10",diameter:"4.32"},
+            9: {circumference:"49.00",diameter:"5.61"},
+            10: {circumference:"50.00",diameter:"6.92"},
+            11: {circumference:"50.90",diameter:"7.21"},
+            12: {circumference:"51.80",diameter:"8.50"},
+            13: {circumference:"52.80",diameter:"9.82"},
+            14: {circumference:"54.00",diameter:"10.20"},
+            15: {circumference:"55.00",diameter:"11.52"},
+            16: {circumference:"55.90",diameter:"12.80"},
+            17: {circumference:"56.90",diameter:"13.12"},
+            18: {circumference:"57.80",diameter:"14.41"},
+            19: {circumference:"59.10",diameter:"15.82"},
+            20: {circumference:"60.00",diameter:"16.11"},
+            21: {circumference:"60.90",diameter:"17.39"},
+            22: {circumference:"61.90",diameter:"18.71"},
+            23: {circumference:"62.80",diameter:"19.00"},
             24: {circumference:"63.80",diameter:"20.32"},
-            25: {circumference:"64.70",diameter:"77.89"}, //77.89px
+            25: {circumference:"64.70",diameter:"21.89"}, //77.89px
         };
 
     }
@@ -144,8 +144,8 @@ class RingSizeContainer extends React.Component {
                     <div
                         className={classes.dot}
                         style={{
-                            width: `${sizeTable[currentStep].diameter}px`,
-                            height: `${sizeTable[currentStep].diameter}px`,
+                            width: `${sizeTable[currentStep].diameter}cm`,
+                            height: `${sizeTable[currentStep].diameter}cm`,
                             transition: "all 0.1s linear",
                         }} />
                 </div>
